@@ -8,7 +8,7 @@ TASK_FAMILY="tetra-cluster-task"
 
 # Create a new task definition for this build
 
-sed -e "s;%BUILD_NUMBER%;${BUILD_NUMBER};g" ../tetra-app.json > tetra-app-v_${BUILD_NUMBER}.json
+sed -e "s;%BUILD_NUMBER%;${BUILD_NUMBER};g" tetranoodle-app-target.json > tetranoodle-app-target-v_${BUILD_NUMBER}.json
 
 aws ecs register-task-definition --family tetra-cluster-task --cli-input-json file://tetra-cluster-task-v_${BUILD_NUMBER}.json
 

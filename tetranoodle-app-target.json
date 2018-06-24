@@ -1,0 +1,18 @@
+{
+  "family": "tetranoodle-app-target",
+  "containerDefinitions": [
+    {
+      "image": "100458984705.dkr.ecr.us-east-2.amazonaws.com/tetranoodle:${BUILD_NUMBER}",
+    "name": "tetranoodle-app-target",
+    "cpu": 10,
+    "memory": 256,
+    "essential": true,
+    "portMappings": [
+    {
+    "containerPort": 80,
+    "hostPort": 80
+    }
+    ]
+  }
+  ]
+}
